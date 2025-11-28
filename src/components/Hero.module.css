@@ -1,0 +1,18 @@
+.buttonContainer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.buttonContainer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.description {
+  transition-delay: 0.2s;
+}
+
+.buttonContainer:not(.description) {
+  transition-delay: 0.4s;
+}
+

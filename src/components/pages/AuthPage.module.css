@@ -1,0 +1,511 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    padding-top: 60px;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    padding: 2.5rem;
+    background: rgba(10, 14, 29, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 1rem;
+}
+
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+.heading {
+    font-family: 'Montserrat', sans-serif; /* Changed font */
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-weight: 700; /* Increased font weight for more impact */
+    /* The BlurText component already provides an animation. 
+       To use a custom one, you could replace BlurText with a normal h1 tag and apply this animation. */
+    /* animation: slideUpFadeIn 0.8s ease-out forwards; */
+}
+
+.subtext {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 380px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formGroup {
+    position: relative;
+    text-align: left;
+}
+
+.inputField {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputField::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+.forgotPassword {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(212, 175, 55, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgotPassword:hover {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+.submitButton {
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #d4af37 !important;
+    color: #0a0a0a !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.divider:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.socialLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.socialButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.socialButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footerLink {
+    color: #d4af37;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
+
+.tagline {
+    font-style: italic;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+/* Add styles for dashboard content */
+.dashboardContent {
+  margin-top: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section h2 {
+  color: #FF94B4;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.searchContainer {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+.profileInfo p {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.ordersList {
+  display: grid;
+  gap: 1rem;
+}
+
+.orderCard {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orderCard h3 {
+  color: #FF94B4;
+  margin-bottom: 0.5rem;
+}
+
+.orderCard p {
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.tailorsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; /* Centers the cards in the container */
+}
+
+.tailorCard {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px;
+  /* Apply the new animation */
+  animation: fadeInScaleUp 0.5s ease-out forwards;
+  /* Start hidden for animation */
+  opacity: 0;
+  max-width: 350px;
+}
+
+.tailorCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 148, 180, 0.2);
+}
+
+.tailorCard h3 {
+  color: #FF94B4;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.tailorCard p {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+/* Stagger the animation for each card */
+.tailorCard:nth-child(1) { animation-delay: 0.1s; }
+.tailorCard:nth-child(2) { animation-delay: 0.2s; }
+.tailorCard:nth-child(3) { animation-delay: 0.3s; }
+.tailorCard:nth-child(4) { animation-delay: 0.4s; }
+.tailorCard:nth-child(5) { animation-delay: 0.5s; }
+.tailorCard:nth-child(6) { animation-delay: 0.6s; }
+/* Add more if you expect more tailors on one page */
+
+.tailorsSection {
+  /* This helps contain the animated cards */
+  overflow: hidden;
+}
+
+.bookButton {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #FF94B4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.bookButton:hover {
+  background: #e883a3;
+  transform: translateY(-1px);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actionButton,
+.logoutButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.actionButton {
+  background: #FF94B4;
+  color: white;
+}
+
+.actionButton:hover {
+  background: #e883a3;
+}
+
+.logoutButton {
+  background: #dc3545;
+  color: white;
+}
+
+.logoutButton:hover {
+  background: #c82333;
+}
+
+.cancelButton {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: #5a6268;
+}
+
+.tailorsSection {
+  width: 100%;
+  max-width: none;
+  padding: 2rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.navContent {
+  width: 100%;
+  max-width: 1200px; /* Or your desired max-width */
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end; /* Pushes content to the right */
+  align-items: center;
+}
+
+.profileIconContainer {
+  position: relative;
+  background-color: transparent; /* Explicitly set background to transparent */
+}
+
+.profileIcon {
+  color: #d4af37; /* Gold color to match theme */
+  width: 50px;
+  height: 40px;
+  margin-right: 0.5rem;
+  margin-top: 2%;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.profileIcon:hover {
+  color: #fff;
+}
+
+.dropdownMenu {
+  position: absolute; 
+  top: calc(100% + 10px);
+  right: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;  
+  background: rgba(10, 14, 29, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  width: 180px;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  /* Initial state for transition */
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out, visibility 200ms;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdownItem {
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(212, 175, 55, 0.15);
+}
+
+.logoutButtonDropdown {
+  color: #ff8a8a;
+}
+
+.logoutButtonDropdown:hover {
+  color: #fff;
+  background-color: rgba(220, 53, 69, 0.5);
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.1);
+}

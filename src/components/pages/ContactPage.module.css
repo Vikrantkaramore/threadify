@@ -1,0 +1,231 @@
+/* ContactPage.module.css */
+
+.contactPage {
+  text-align: center;
+  color: #fff;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 4rem auto;
+}
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.heroHeading {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.heroSubtext {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* --- Form Section --- */
+.formSection {
+  background: rgba(16, 16, 16, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.inputField,
+.selectField,
+.textareaField {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  font-family: var(--font-roboto);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputField::placeholder,
+.textareaField::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.inputField:focus,
+.selectField:focus,
+.textareaField:focus {
+  outline: none;
+  border-color: #d4af37; /* Soft Gold */
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+.inputError {
+  border-color: #ff4d4d !important;
+  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.2);
+}
+
+.errorMessage {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  text-align: left;
+  position: absolute;
+  bottom: -1.4em;
+  left: 4px;
+  font-weight: 500;
+}
+
+.selectField {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.2em;
+  padding-right: 3rem;
+}
+
+.submitButton {
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #d4af37 !important; /* Soft Gold */
+  color: #0a0a0a !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.submitButton:disabled {
+  background-color: #bda031 !important; /* A slightly darker gold */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.spinner {
+  border: 2px solid rgba(10, 10, 10, 0.2);
+  border-left-color: #0a0a0a;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  animation: spin 1s linear infinite;
+}
+
+/* --- Alternative Contact & Socials --- */
+.subHeading {
+  font-size: 1.8rem;
+  color: #eee;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.contactItem {
+  text-align: center;
+}
+
+.contactIcon {
+  font-size: 2.5rem;
+  color: #d4af37; /* Soft Gold */
+  margin-bottom: 0.75rem;
+}
+
+.contactItem h4 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.contactItem p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.socialIcons a {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.socialIcons a:hover {
+  color: #d4af37; /* Soft Gold */
+  transform: scale(1.1);
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.finalTagline {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .errorMessage {
+    position: static;
+    padding-top: 4px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

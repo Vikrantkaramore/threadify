@@ -1,0 +1,128 @@
+.servicesPage {
+    padding: 2rem 1rem;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heroDescription {
+    max-width: 700px;
+    margin: 1rem auto 0;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.serviceCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-out;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.serviceTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FF94B4;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.serviceIcon {
+    font-size: 1.8rem;
+}
+
+.serviceTagline {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.listTitle {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.serviceList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.serviceQuote {
+    margin-top: auto;
+    font-style: italic;
+    color: #FF94B4;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.whyChooseSection, .ctaSection {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.08), transparent 70%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.subHeading {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.featuresList {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.ctaButtons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+
+/* Animation styles */
+.cardAnimate {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.cardHidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.cardVisible {
+    opacity: 1;
+    transform: translateY(0);
+}

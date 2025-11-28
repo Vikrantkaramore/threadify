@@ -1,0 +1,30 @@
+.backToTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #FF94B4;
+  color: #0D0716;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(255, 148, 180, 0.4);
+}
+
+.backToTopButton.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.backToTopButton:hover {
+  background-color: #FF6B9D;
+}

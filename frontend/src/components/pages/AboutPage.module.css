@@ -1,0 +1,209 @@
+.aboutPage {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.heroContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: row;
+    text-align: left;
+}
+
+.heroText {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.heroHeading {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.heroDescription {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.heroImageContainer {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.heroImage {
+    border-radius: 8px;
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heroImage:hover,
+.heroImage:focus-visible {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Main Content */
+.main {
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.subHeading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #eee;
+    font-weight: 600;
+}
+
+.twoColumnSection {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.twoColumnSectionReverse {
+    flex-wrap: wrap-reverse;
+}
+
+.textColumn {
+    flex: 1 1 300px;
+}
+
+.imageColumn {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.sectionImage {
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sectionImage:hover,
+.sectionImage:focus-visible {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.missionSection {
+    max-width: 1200px;
+}
+
+.missionLayout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.missionIcons {
+    flex: 2 1 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.valueIcon {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.valueIconEmoji {
+    font-size: 2.5rem;
+}
+
+.valueIconTitle {
+    margin: 0.5rem 0 0;
+}
+
+.promiseSection {
+    background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.08), transparent 70%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.promiseList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.promiseListItem {
+    margin: 0.5rem 0;
+}
+
+/* Footer CTA */
+.footer {
+    border-top: 1px solid rgba(248, 244, 244, 0.1);
+    padding: 4rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footerContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ctaButton {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #FF94B4, #FF3232);
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 50, 50, 0.5);
+}

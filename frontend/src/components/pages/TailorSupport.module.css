@@ -1,0 +1,153 @@
+/* TailorSupport specific styles */
+
+.dashboardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 60px;
+  padding-bottom: 2rem;
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.introSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mainSubtitle {
+  font-size: 1.5rem;
+  color: #FF94B4;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.introText {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.contentSection {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  color: #FF94B4;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.subsectionTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.faqContainer p,
+.contactContainer p,
+.guidelinesContainer p,
+.troubleshootingContainer p,
+.policiesContainer p,
+.commitmentContainer p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.faqContainer strong,
+.contactContainer strong,
+.guidelinesContainer strong,
+.troubleshootingContainer strong,
+.policiesContainer strong,
+.commitmentContainer strong {
+  color: #FF94B4;
+}
+
+.faqContainer,
+.contactContainer,
+.guidelinesContainer,
+.troubleshootingContainer,
+.policiesContainer,
+.commitmentContainer {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.guidelinesContainer ul {
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 1.5rem;
+}
+
+.guidelinesContainer li {
+  margin-bottom: 0.5rem;
+}
+
+.policiesContainer ul {
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 1.5rem;
+}
+
+.policiesContainer li {
+  margin-bottom: 0.5rem;
+}
+
+.ctaSection {
+  text-align: center;
+  background: rgba(255, 148, 180, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 148, 180, 0.2);
+}
+
+.ctaTitle {
+  color: #FF94B4;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ctaText {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #FF94B4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background: #e883a3;
+  transform: translateY(-1px);
+}

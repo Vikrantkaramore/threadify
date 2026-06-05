@@ -7,7 +7,10 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "user-select",
+          "backdrop-filter",
+          "-webkit-overflow-scrolling",
+          "background-color: oklch(20.8% 0.042 265.755)"
         ]
       }
     ]

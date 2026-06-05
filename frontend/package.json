@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/Vikrantkaramore/threadify.git",
   "name": "threadify",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "node server.js"
+    "server": "node server.js",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

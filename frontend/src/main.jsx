@@ -8,7 +8,7 @@ import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Suspense fallback="Loading...">
-      <BrowserRouter>
+      <BrowserRouter basename="/threadify">
         <App />
       </BrowserRouter>
     </Suspense>

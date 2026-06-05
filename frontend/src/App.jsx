@@ -22,6 +22,11 @@ import CustomerDashboard from './components/pages/CustomerDashboard';
 import TailorDashboard from './components/pages/TailorDashboard';
 import TailorChat from './components/pages/TailorChat';
 import ChatPage from './components/pages/ChatPage';
+import ProfilePage from './components/pages/ProfilePage';
+import SettingsPage from './components/pages/SettingsPage';
+import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage';
+import TermsOfServicePage from './components/pages/TermsOfServicePage';
+import RefundPolicyPage from './components/pages/RefundPolicyPage';
 
 import ProtectedRoute from './components/ProtectedRoute';
 import Navigation from './components/Navigation';
@@ -78,12 +83,25 @@ const App = () => {
             </ProtectedRoute>
           } />
           <Route path="/notifications" element={
-            <ProtectedRoute allowedRoles={['tailor']}>
+            <ProtectedRoute allowedRoles={['customer', 'tailor']}>
               <NotificationsPage />
             </ProtectedRoute>
           } />
+          <Route path="/profile" element={
+            <ProtectedRoute allowedRoles={['customer', 'tailor']}>
+              <ProfilePage />
+            </ProtectedRoute>
+          } />
+          <Route path="/settings" element={
+            <ProtectedRoute allowedRoles={['customer', 'tailor']}>
+              <SettingsPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="/refund-policy" element={<RefundPolicyPage />} />
           <Route path="/login" element={<Navigate to="/login/customer" replace />} />
-            <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />
